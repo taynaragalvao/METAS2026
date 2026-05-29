@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+
+/* suggestion for choosing color palettes: https://colorhunt.co/ */
+:root {
+    --bg-color: #02053a;
+    --salmon: #E17564;
+    --white: #FFFFFF;
+    --active-btn: #b1506d;
+    --inactive-btn: #522546;
+    --text-bg: #210F37;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--white);
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-title {
+    text-align: left;
+    width: 100%;
+    font-size: 32px;
+}
+
+.main-title span {
+    color: var(--salmon);
+}
+
+.button {
+    font-family: 'Chakra Petch', sans-serif;
+    background-color: var(--inactive-btn);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 4px solid var(--active-btn);
+    border-left: 2px solid var(--active-btn);
+    border-right: 2px solid var(--active-btn);
+    border-top: none;
+}
+
+.button:first-child {
+    border-radius: 40px 40px 0 0;
+}
+
+.buttons {
+    display: block;
+}
+
+.button.active {
+    background-color: var(--active-btn);
+    border-bottom: 4px solid var(--salmon);
+}
+
+.tabs-content {
+    background-color: var(--text-bg);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content-main-title {
+    font-size: 28px;
+    text-align: center;
+}
+
+.tab-content-secondary-title {
+    text-align: center;
+    color: var(--salmon);
+    text-transform: uppercase;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.counter-digit {
+    padding: 0 16px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.counter-digit-number {
+    font-size: 80px;
+    margin: 0;
+}
+
+.counter-digit-label {
+    color: var(--salmon);
+    font-size: 20px;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .buttons {
+        display: flex;
+    }
+    .button:first-child {
+        border-radius: 40px 0 0 0;
+    }
+    .button:last-child {
+        border-radius: 0 40px 0 0;
+    }
+}
